@@ -1,0 +1,23 @@
+{
+  "name": "2.1",
+  "version": "1.0.0",
+  "description": "This is the package to accompany modual 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "example",
+    "data",
+    "selfit"
+  ],
+  "author": "Edward Cerverizzo",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "merge-descriptors": "^1.0.1",
+    "nedb": "^1.8.0",
+    "node-fetch": "^2.6.0"
+  }
+}
