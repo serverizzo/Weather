@@ -3,9 +3,6 @@ const Datastore = require('nedb')
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-console.log(process.env)
-
-
 const {
     request,
     response
@@ -30,14 +27,10 @@ app.get('/api', (request, response) => {
         }
         response.json(data)
     });
-
-    // response.json({
-    //     test: "Here I am :)"
-    // })
 })
 
 app.post('/api', (request, response) => {
-    console.log("I recieved something :o")
+    // console.log("I recieved something :o")
     data = request.body
     data.timestamp = Date.now()
     database.insert(data)
