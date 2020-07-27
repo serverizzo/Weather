@@ -11,35 +11,34 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 
+function updatePleaseWait() {
+    document.getElementById('waiting').textContent = "";
+}
+
 function setup() {
     noCanvas();
     geolocate()
+
+
     // const video = createCapture(VIDEO);
-    const button = document.getElementById('checkin')
-    button.addEventListener('click', async event => {
-        //     video.loadPixels()
-        //     const image64 = video.canvas.toDataURL()
-        //     const mood = document.getElementById('mood').value
-        const latitude = document.getElementById("lat").textContent
-        const longitude = document.getElementById("lon").textContent
-        //     // information to be sent to the server 
-        const data = {
-            latitude,
-            longitude
-            // mood,
-            // image64
-        }
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        }
-        const response = await fetch('/api', options)
-        const json = await response.json();
-        console.log(json)
-    })
+    // button.addEventListener('click', async event => {
+    //     const latitude = document.getElementById("lat").textContent
+    //     const longitude = document.getElementById("lon").textContent
+    //     const data = {
+    //         latitude,
+    //         longitude
+    //     }
+    //     const options = {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     }
+    //     const response = await fetch('/api', options)
+    //     const json = await response.json();
+    //     console.log(json)
+    // })
 
 }
 
@@ -102,6 +101,10 @@ async function geolocate() {
             console.log(json)
 
 
+            //  change zoom and position of map
+            // mymap.setZoom
+            mymap.setView([latitude, longitude], 10)
+
             var marker = L.marker([latitude, longitude]).addTo(mymap);
             marker.bindPopup("You are here.").openPopup();
 
@@ -127,6 +130,8 @@ async function geolocate() {
                     Measurements: <br> ${measurements}
                     </p>`)
             }
+
+            updatePleaseWait()
 
         })
     } else {
