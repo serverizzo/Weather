@@ -89,9 +89,15 @@ async function geolocateHere() {
             var marker = L.marker([latitude, longitude]).addTo(mymap);
             marker.bindPopup("You are here.").openPopup();
 
+            const weatherStationIcon = L.icon({
+                iconUrl: "./icons/icons8-spring-100.png"
+            })
+
             for (let i = 0; i < aq_json.results.length; i++) {
                 const curr = aq_json.results[i]
-                const aqNode = L.marker([curr.coordinates.latitude, curr.coordinates.longitude]).addTo(mymap);
+                const aqNode = L.marker([curr.coordinates.latitude, curr.coordinates.longitude], {
+                    icon: weatherStationIcon
+                }).addTo(mymap);
 
                 let measurements = "";
                 for (let j = 0; j < curr.measurements.length; j++) {
