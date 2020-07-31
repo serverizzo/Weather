@@ -3,6 +3,8 @@ const Datastore = require('nedb')
 const fetch = require('node-fetch');
 require('dotenv').config();
 
+const tenMilesInMeters = 16093;
+
 const {
     request,
     response
@@ -68,8 +70,8 @@ app.get('/aq/:latlon', async (request, response) => {
     latlon = request.params.latlon.split(",")
     const lat = latlon[0]
     const lon = latlon[1]
-    // Air Quality
-    const aq_response = await fetch(`https://api.openaq.org/v1/latest?coordinates=${lat},${lon}&radius=16093`)
+    // Air Quality -- Note: radius = 16093meters = 10 miles
+    const aq_response = await fetch(`https://api.openaq.org/v1/latest?coordinates=${lat},${lon}&radius=${tenMilesInMeters}`)
     const aq_data = await aq_response.json()
     console.log(aq_data)
 

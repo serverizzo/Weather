@@ -17,6 +17,9 @@
     <html lang="en">
 
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <!-- include p5.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
         integrity="sha512-At/xiUTqCg8jxnCMRNDhDVDm4qxlyPt1K+GrDhUvRvR8MjlBq0RH65OVVaCXn3OuvyVWK8CdlQpxgrc/5YspHw=="
@@ -32,35 +35,127 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
 
+    <link rel="stylesheet" href="styles.css">
+
+
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <h1>Weather Here</h1>
 
-    <p id="waiting"> Please wait, we are getting the data... </p>
+    <div id="parent">
+        <div id="left">
+            <div class="block">
+                <h1>Weather Here</h1>
 
-    <p> longitude: <span id="lon"> </span>° <br>
-        latitude: <span id="lat"> </span>°</p>
+                <p id="waiting"> Please wait, we are getting the data... </p>
+
+                <p> longitude: <span id="lon"> </span>° <br>
+                    latitude: <span id="lat"> </span>°</p>
 
 
-    <p>Your weather station is: <b><span id="weatherBase"></span></b> <br>
-        The weather currently is <b><span id="weather"></span></b> <br> <br>
+                <p>Your weather station is: <b><span id="weatherBase"></span></b> <br>
+                    The weather currently is <b><span id="weather"></span></b> <br> <br>
 
-        tempature: <b><span id="tempature"></span>° F</b> <br>
-        but it feels like <b><span id="feelsLike"></span> ° F</b> <br>
-    </p>
-    <div id="mapid" style="height: 500px"></div>
+                    tempature: <b><span id="tempature"></span>° F</b> <br>
+                    but it feels like <b><span id="feelsLike"></span> ° F</b> <br>
+                </p>
+            </div>
+            <div class="block">
 
-    <button id="checkin" onclick="geolocateHere()">Change my coordinates</button>
-    <!-- <button id='submit'>Submit</button> -->
+
+
+            </div>
+
+            <!-- <h2>Pollutants:</h2>
+            <p>
+                o3: o3 or ozone (or smog), is the same stuff that reflects protects life on earth from ultraviolet
+                radiation.
+                However at ground level it can be hazardous. This pollutant arises from the interaction between sunlight
+                and
+                emmissions cars, industry, powerplants, these emmissions can also be no2.
+
+                Healthy range: The natural amount of ozone in the lower atmosphere is generally around 0.04 parts per
+                million
+                (ppm), and that amount is not harmful to human health. [1]
+                Effects on health: Nose, throat, chest irritation or lung damage.
+                How to reduce exposure: You can find the highest levels of ozone during afternoons and early evening in
+                summer.
+                Try to stay away from busy roadways during this time
+
+
+                pm25: particles with a diameter of 2.5 micrometers or less. These particles are so small that after they
+                enter
+                the lungs, they can enter your blood stream. [3]
+
+                Healthy range: --fill me in---
+                Effects on health: --fill me in---
+                How to reduce exposure: --fill me in---
+
+
+                pm10: particles with a diameter of 10 micrometers or less (but greater than 2.5). These paricles can
+                effect
+                the
+                heart and lungs. [3]
+
+                Healthy range: --fill me in---
+                Effects on health: --fill me in---
+                How to reduce exposure: --fill me in---
+
+
+                no2: Nitrogen dioxide is a gas that is formed from car and industry emmissions. When interacted with
+                sunlight
+                they help form o3 (ozone). [4]
+
+                Healthy range: --fill me in---
+                Effects on health: --fill me in---
+                How to reduce exposure: --fill me in---
+
+                co: Carbon monoxide forms when carbon in fuels do not completly burn. It is this reason that carbon
+                monoxide
+                is
+                highest during colder weather. [5]
+
+                Healthy range: --fill me in---
+                Effects on health: --fill me in---
+                How to reduce exposure: --fill me in---
+
+                s02: --fill me in--
+
+                Healthy range: --fill me in---
+                Effects on health: --fill me in---
+                How to reduce exposure: --fill me in---
+            </p> -->
+
+        </div>
+
+        <div id="right">
+            <div id="mapid"></div>
+
+            <button type="button" class="btn btn-block btn-primary" id="checkin" onclick="geolocateHere()">Change my
+                coordinates</button>
+
+        </div>
+
+    </div>
+
     <script src='/sketch.js'></script>
-    <!-- <script src="" async defer></script> -->
-
-
 
 </body>
+
+<!-- <footer>
+    Sources:
+    Air quality:
+    https://www3.epa.gov/region1/airquality/avg8hr.html
+    [1] https://www.environment.gov.au/protection/publications/factsheet-ground-level-ozone-o3
+    [4] https://www.health.nsw.gov.au/environment/air/Pages/nitrogen-dioxide.aspx
+    [5] https://www.health.nsw.gov.au/environment/air/Pages/carbon-monoxide.aspx
+    [6] https://www.health.nsw.gov.au/environment/air/Pages/sulphur-dioxide.aspx
+    https://www.health.nsw.gov.au/environment/air/Pages/common-air-pollutants.aspx
+    https://www.epa.gov/ground-level-ozone-pollution/ground-level-ozone-basics
+
+</footer> -->
 
 </html>

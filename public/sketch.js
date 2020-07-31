@@ -1,3 +1,5 @@
+const tenMilesInMeters = 16093;
+
 // setup map
 var mymap = L.map('mapid').setView([51.505, -0.09], 2);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -88,6 +90,12 @@ async function geolocateHere() {
 
             var marker = L.marker([latitude, longitude]).addTo(mymap);
             marker.bindPopup("You are here.").openPopup();
+            var circle = L.circle([latitude, longitude], {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+                radius: tenMilesInMeters
+            }).addTo(mymap);
 
             const weatherStationIcon = L.icon({
                 iconUrl: "./icons/icons8-spring-100.png"

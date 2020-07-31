@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+div {
+    outline: 2px solid black;
+}
+
+/* body {
+    height: 100%
+} */
+
+#parent {
+    /* margin: 5px; */
+    /* padding: 10px; */
+    outline: 4px solid red;
+    /* border: 4px solid red; */
+    height: 100vh;
+    overflow: hidden;
+    /* Overflow: hidden; prevents parent from collapsing when all children are floating*/
+    background: purple;
+}
+
+.block {
+    margin: 10px;
+    padding: 20px;
+    background: white
+}
+
+
+/* left */
+#left {
+    float: left;
+    width: 50%;
+}
+
+
+/* right */
+#right {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+#mapid {
+    /* width: 50vw; */
+    height: 90%;
+    width: 100%;
+}
