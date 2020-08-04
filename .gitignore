@@ -1,2 +1,4 @@
 node_modules
 .env
+/public/test.html
+/public/test.css
