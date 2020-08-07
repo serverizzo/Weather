@@ -27,7 +27,8 @@ div {
 .block {
     margin: 10px 10px 10px 10px;
     padding: 20px;
-    background: white
+    background: white;
+    outline: black solid 3px;
     
 }
 
@@ -52,7 +53,8 @@ div {
 }
 
 #geolocateButton{
-    height: 10%
+    height: 10%;
+    border-radius: 0;
 }
 
 #mapid {

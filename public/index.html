@@ -77,7 +77,6 @@
                 </p>
             </div>
             <div class="block">
-                <p>
                 <div class="accordion" id="accordionPollutants">
                     <h1>About Pollutants</h1>
 
@@ -226,7 +225,6 @@
                     </div>
 
                 </div>
-                </p>
             </div>
 
 
@@ -297,8 +295,10 @@
             <div id="mapid"></div>
 
             <button id='geolocateButton' type="button" class="btn btn-block btn-primary" id="checkin"
-                onclick="geolocate()">
-                <h2>Change my
+                onclick="toggleCircle()">
+                <!-- <button id='geolocateButton' type="button" class="btn btn-block btn-primary" id="checkin"
+                onclick="geolocate()"> -->
+                <h2 id="geolocateButtonText">Change my
                     coordinates</h2>
             </button>
 
