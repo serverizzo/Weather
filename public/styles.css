@@ -6,7 +6,7 @@
 
 
 div {
-    outline: 2px solid black;
+    /* outline: 2px solid black; */
 }
 
 /* body {
@@ -25,9 +25,10 @@ div {
 }
 
 .block {
-    margin: 10px;
+    margin: 10px 10px 10px 10px;
     padding: 20px;
     background: white
+    
 }
 
 
@@ -35,6 +36,7 @@ div {
 #left {
     /* float: left; */
     width: 50%;
+    margin: 10px 0 0 0;
 }
 
 #aq {
@@ -47,6 +49,10 @@ div {
     /* float: right; */
     width: 50%;
     height: 100%;
+}
+
+#geolocateButton{
+    height: 10%
 }
 
 #mapid {

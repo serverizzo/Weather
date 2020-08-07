@@ -24,13 +24,13 @@
     <!-- bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- include p5.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
@@ -59,7 +59,7 @@
 
     <div id="parent" class="d-flex ">
         <div id="left" class="mr-auto overflow-auto">
-            <a href="./test.html">Here</a>
+            <!-- <a href="./test.html">Here</a> -->
             <div class="block">
                 <h1>Weather Here</h1>
 
@@ -78,188 +78,158 @@
             </div>
             <div class="block">
                 <p>
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button"
-                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">
-                                        Collapsible Group Item #1
-                                    </button>
-                                </h2>
-                            </div>
+                <div class="accordion" id="accordionPollutants">
+                    <h1>About Pollutants</h1>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad
-                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it
-                                    squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica,
-                                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur
-                                    butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                    synth
-                                    nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
+                    <!-- o3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapse-o3" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    o3
+                                </button>
+                            </h2>
                         </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad
-                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it
-                                    squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica,
-                                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur
-                                    butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                    synth
-                                    nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad
-                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it
-                                    squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica,
-                                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur
-                                    butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                    synth
-                                    nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
+                        <div id="collapse-o3" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionPollutants">
+                            <div class="card-body">
+                                <p>
+                                    pm25: particles with a diameter of 2.5 micrometers or less. These particles are so
+                                    small
+                                    that after they enter the lungs, they can enter your blood stream.
+                                </p>
                             </div>
                         </div>
                     </div>
-                </p>
-            </div>
 
-            <div class="block">
-
-                <p>
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left" type="button"
-                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                        aria-controls="collapseOne">
-                                        Collapsible Group Item #1
-                                    </button>
-                                </h2>
-                            </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad
-                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it
-                                    squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica,
-                                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur
-                                    butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                    synth
-                                    nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
+                    <!-- pm25 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapse-pm25" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    pm25
+                                </button>
+                            </h2>
                         </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">
-                                        Collapsible Group Item #2
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad
-                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it
-                                    squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica,
-                                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur
-                                    butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                    synth
-                                    nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        Collapsible Group Item #3
-                                    </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                data-parent="#accordionExample">
-                                <div class="card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                    richardson ad
-                                    squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
-                                    on it
-                                    squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                                    helvetica,
-                                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-                                    excepteur
-                                    butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
-                                    synth
-                                    nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
+                        <div id="collapse-pm25" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionPollutants">
+                            <div class="card-body">
+                                <p>
+                                    pm25: particles with a diameter of 2.5 micrometers or less. These particles are so
+                                    small
+                                    that after they enter the lungs, they can enter your blood stream.
+                                </p>
                             </div>
                         </div>
                     </div>
+
+                    <!-- pm10 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapse-pm10" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    pm10
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse-pm10" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionPollutants">
+                            <div class="card-body">
+                                <p>
+                                    pm25: particles with a diameter of 2.5 micrometers or less. These particles are so
+                                    small
+                                    that after they enter the lungs, they can enter your blood stream.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- no2 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapse-no2" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    no2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse-no2" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionPollutants">
+                            <div class="card-body">
+                                <p>
+                                    pm25: particles with a diameter of 2.5 micrometers or less. These particles are so
+                                    small
+                                    that after they enter the lungs, they can enter your blood stream.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- co -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapse-co" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    co
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse-co" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionPollutants">
+                            <div class="card-body">
+                                <p>
+                                    pm25: particles with a diameter of 2.5 micrometers or less. These particles are so
+                                    small
+                                    that after they enter the lungs, they can enter your blood stream.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 
+                    s02: --fill me in--
+
+                    Healthy range: --fill me in---
+                    Effects on health: --fill me in---
+                    How to reduce exposure: --fill me in--- -->
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapse-so2" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    so2
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapse-so2" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionPollutants">
+                            <div class="card-body">
+                                <p>
+                                    pm25: particles with a diameter of 2.5 micrometers or less. These particles are so
+                                    small
+                                    that after they enter the lungs, they can enter your blood stream.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
                 </p>
             </div>
+
+
 
             <!-- <h2>Pollutants:</h2>
             <p>
@@ -326,7 +296,8 @@
         <div id="right">
             <div id="mapid"></div>
 
-            <button type="button" class="btn btn-block btn-primary" id="checkin" onclick="geolocateHere()">Change my
+            <button id='geolocateButton' type="button" class="btn btn-block btn-primary" id="checkin"
+                onclick="geolocateHere()">Change my
                 coordinates</button>
 
         </div>
