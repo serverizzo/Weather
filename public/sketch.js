@@ -20,11 +20,11 @@ function updatePleaseWait() {
 // p5 function -- first to execute 
 function setup() {
     noCanvas();
-    geolocate()
+    geolocate("first")
 }
 
 
-async function geolocateHere() {
+async function geolocateHere(myInput) {
     if ('geolocation' in navigator) {
         console.log("Geolocation avalible. Please wait for location.")
 
@@ -138,7 +138,7 @@ async function geolocateHere() {
 
 
 
-async function geolocate() {
+async function geolocate(myInput) {
     if ('geolocation' in navigator) {
         console.log("Geolocation avalible. Please wait for location.")
 
@@ -146,14 +146,27 @@ async function geolocate() {
             // console.log(position);
 
             // toFixed truncates the decimal
-            const latitude = position.coords.latitude.toFixed(3)
-            const longitude = position.coords.longitude.toFixed(3)
+
+            let latitude, longitude
+            console.log("myInput: ", myInput)
+            if (myInput === "first") {
+                console.log("executed")
+                latitude = position.coords.latitude.toFixed(3)
+                longitude = position.coords.longitude.toFixed(3)
+            }
+            else {
+                const ll = mymap.getCenter()
+                console.log(ll)
+                latitude = ll.lat;
+                longitude = ll.lng;
+            }
 
             //update html
             document.getElementById("lon").textContent = longitude
             document.getElementById("lat").textContent = latitude
             // console.log(longitude)
             // console.log(latitude)
+
 
 
             // request weather from server endpoint
