@@ -32,10 +32,15 @@ let centerFunction = function () {
     console.log("I moved!")
 }
 
+function pleaseWait() {
+    document.getElementById("waiting").innerHTML = "<b>Please wait, we are getting the data...</b>"
+}
+
 function toggleCircle() {
 
     if (isOn) {
         deleteCircle()
+        pleaseWait()
         geolocate()
         document.getElementById("geolocateButtonText").innerHTML = "Change my coordinates"
     }
