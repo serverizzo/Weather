@@ -12,9 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
 
 
-function updatePleaseWait() {
-    document.getElementById('waiting').textContent = "";
-}
+
 
 
 // p5 function -- first to execute 
@@ -34,6 +32,9 @@ let centerFunction = function () {
 
 function pleaseWait() {
     document.getElementById("waiting").innerHTML = "<b>Please wait, we are getting the data...</b>"
+}
+function updatePleaseWait() {
+    document.getElementById('waiting').textContent = "";
 }
 
 function toggleCircle() {
