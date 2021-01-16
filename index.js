@@ -54,7 +54,7 @@ app.get('/weather/:latlon', async (request, response) => {
     // const lat = 
     // const weatherInfoRaw = await fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=e29af522f201978c509b3a6b5b306841`)
     // const weatherInfoRaw = await fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=${APIKey}`)
-    const weatherInfoRaw = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=imperial`)
+    const weatherInfoRaw = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=imperial`).catch(err => { console.log("Caught error on weather request") })
     // const weatherInfoRaw = await fetch(`https://api.openweathermap.org/data/2.5/?q=NewYorkCity,NY&appid=${APIKey}`)
     // .catch(err => console.log(err))
     // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
@@ -71,7 +71,7 @@ app.get('/aq/:latlon', async (request, response) => {
     const lat = latlon[0]
     const lon = latlon[1]
     // Air Quality -- Note: radius = 16093meters = 10 miles
-    const aq_response = await fetch(`https://api.openaq.org/v1/latest?coordinates=${lat},${lon}&radius=${tenMilesInMeters}`)
+    const aq_response = await fetch(`https://api.openaq.org/v1/latest?coordinates=${lat},${lon}&radius=${tenMilesInMeters}`).catch(err => { console.log("Caught error on air quality request") })
     const aq_data = await aq_response.json()
     console.log(aq_data)
 
